@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="styling.css">
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+        <script src="module.js"></script>
+    </head>
+
+    <body ng-app="myapp" ng-controller="ctrl" class="mybody">
+        <div class="quizblock">
+            <h2>{{questions[curr].question}}</h2>
+            <ul>
+
+                <li ng-repeat="choice in questions[curr].choices">
+                    <input type="radio" name="choice"
+                        ng-model="$parent.useranswer" ng-value="choice" required>{{choice}}
+                </li>
+            </ul>
+            <button ng-click="checkanswer()" ng-disabled="!useranswer"><b>Submit</b></button>
+            <p ng-show="showresult" class="result">{{result}}</p>
+            <button ng-click="nextquestion()"
+                ng-show="showresult && curr<questions.length - 1">Next
+                Question</button>
+            <button ng-click="showres()"
+                ng-show="curr==questions.length-1 && showresult">Show Result</button>
+            <button ng-click="restart()" ng-show="showscore">Restart</button>
+        </div>
+
+    </body>
+
+</html>

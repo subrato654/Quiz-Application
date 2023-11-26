@@ -1,0 +1,43 @@
+.quizblock {
+    max-width: 50%;
+    margin: 110px auto;
+    padding: 20px;
+    border: 1px solid #150f0f;
+    background: linear-gradient(to bottom right, rgb(228, 188, 188), #66a0b3,rgb(179, 102, 166));
+    border-radius: 10px;
+}
+ 
+.mybody {
+    background-color: aquamarine;
+}
+ 
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+ 
+li {
+    margin: 10px 0;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+ 
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4c61af;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+ 
+button:hover {
+    background-color: chocolate;
+ 
+}
+ 
+.result {
+    margin-top: 20px;
+    font-weight: bold;
+}
